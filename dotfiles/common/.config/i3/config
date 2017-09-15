@@ -13,7 +13,9 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+#font pango:monospace 8
+font pango:SourceCodePro 8,FontAwesome 8
+
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -31,7 +33,7 @@ floating_modifier $mod
 
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+Shift+q kill ; exec pkill -SIGRTMIN+2 i3blocks
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -39,16 +41,16 @@ bindsym $mod+Shift+q kill
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+j focus left ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+k focus down ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+l focus up ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+semicolon focus right ; exec pkill -SIGRTMIN+2 i3blocks
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod+Left focus left ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Down focus down ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Up focus up ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Right focus right ; exec pkill -SIGRTMIN+2 i3blocks
 
 # move focused window
 bindsym $mod+Shift+j move left
@@ -80,10 +82,10 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+space focus mode_toggle ; exec pkill -SIGRTMIN+2 i3blocks
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym $mod+a focus parent ; exec pkill -SIGRTMIN+2 i3blocks
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -142,28 +144,28 @@ set $ws9  "9:九"
 set $ws10 "10:十"
 
 # switch to workspace
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
+bindsym $mod+1 workspace $ws1 ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+2 workspace $ws2 ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+3 workspace $ws3 ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+4 workspace $ws4 ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+5 workspace $ws5 ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+6 workspace $ws6 ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+7 workspace $ws7 ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+8 workspace $ws8 ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+9 workspace $ws9 ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+0 workspace $ws10 ; exec pkill -SIGRTMIN+2 i3blocks
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
-bindsym $mod+Shift+5 move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace number $ws6
-bindsym $mod+Shift+7 move container to workspace number $ws7
-bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $mod+Shift+1 move container to workspace number $ws1 ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Shift+2 move container to workspace number $ws2 ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Shift+3 move container to workspace number $ws3 ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Shift+4 move container to workspace number $ws4 ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Shift+5 move container to workspace number $ws5 ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Shift+6 move container to workspace number $ws6 ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Shift+7 move container to workspace number $ws7 ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Shift+8 move container to workspace number $ws8 ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Shift+9 move container to workspace number $ws9 ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Shift+0 move container to workspace number $ws10 ; exec pkill -SIGRTMIN+2 i3blocks
 
 set_from_resource $darkred     color1  #cc241d
 set_from_resource $red         color9  #fb4934
@@ -182,7 +184,9 @@ set_from_resource $white       color15 #000000
 
 set $black       #282828
 set $darkblack   #8ec07c
-set $transparent #00000000
+set $transparent #000001a3
+#set $barbg #2f343f
+set $barbg #2D2D2D
 
 #                       BORDER      BACKGROUND  TEXT        INDICATOR   CHILD_BORDER
 client.focused          $red      $black      $darkwhite  $darkblack  $darkyellow
@@ -194,20 +198,25 @@ client.background       $black
 hide_edge_borders smart
 
 bar {
+        position top
         status_command i3blocks
         #status_command i3status
         strip_workspace_numbers yes
-        separator_symbol "■"
+        #separator_symbol " "
+        #separator_symbol " *"
+        separator_symbol " ❮"
+        separator_symbol "∗"
+        separator_symbol " "
         i3bar_command i3bar -t
         colors {
             statusline         $white
-            background         $transparent
-            separator          $transparent
+            background         $barbg
+            separator          $green
 
     #                          BORDER       BACKGROUND   TEXT
-            focused_workspace  $transparent $transparent $red
-            inactive_workspace $transparent $transparent $white
-            active_workspace   $transparent $transparent $white
+            focused_workspace  $barbg $barbg $red
+            inactive_workspace $barbg $barbg $white
+            active_workspace   $barbg $barbg $white
             urgent_workspace   $darkred     $darkred     $transparent
             binding_mode       $darkred     $darkred     $transparent
         }
@@ -218,18 +227,23 @@ bar {
 #bindsym XF86AudioLowerVolume exec --no-startup-id amixer -c -1 set Master 2dB-
 #bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -c 0 set Master 2dB+
 
+# backlight
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
+
 # pulseaudio
-bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up 
-bindsym XF86AudioMute exec --no-startup-id pamixer -t
+# kill i3blocks with signal to update volume instantly
+bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down && pkill -SIGRTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up && pkill -SIGRTMIN+1 i3blocks
+bindsym XF86AudioMute exec --no-startup-id pamixer -t && pkill -SIGRTMIN+1 i3blocks
 bindsym $mod+m exec --no-startup-id pamixer -t 
 
 # filebrowser
 bindsym $mod+n exec --no-startup-id nemo --no-desktop 
 
 # cycle workspaces
-bindsym $mod+p workspace next
-bindsym $mod+i workspace prev
+bindsym $mod+p workspace next ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+i workspace prev ; exec pkill -SIGRTMIN+2 i3blocks
 
 # music control
 bindsym $mod+z exec --no-startup-id mpc toggle
@@ -244,26 +258,80 @@ bindsym Control+Mod1+Shift+A exec --no-startup-id sh ~/script/togglesound.sh
 bindsym Control+Mod1+Shift+L exec --no-startup-id i3lock-fancy
 
 # tab between workspace
-bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Tab workspace back_and_forth ; exec pkill -SIGRTMIN+2 i3blocks
 
 # toggle sticky window
 bindsym $mod+Shift+S sticky toggle 
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show Drun
+bindsym $mod+d exec rofi -show Drun && exec pkill -SIGRTMIN+2 i3blocks
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id termite
+#bindsym $mod+Return exec --no-startup-id termite ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Return exec --no-startup-id termite ; exec sleep 1 && exec pkill -SIGRTMIN+2 i3blocks
 
 for_window [class="(?i)pavucontrol"] floating enable, move position mouse
 
-exec feh --bg-fill ~/img/spacecity.jpg
+bindsym $mod+y fullscreen disable; floating enable; resize set 600 400; sticky enable; move window to position 1940 54
+
+exec feh --bg-fill ~/img/wall/spacecity.jpg
 
 new_window none
 ##
 # gaps
 ##
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 2
+
+set $default_gaps_inner 0
+set $default_gaps_outer 0
 
 gaps inner 10
+gaps outer 0
 smart_gaps on
+
+# gaps control
+
+set $mode_gaps gaps
+set $mode_gaps_outer outer gaps
+set $mode_gaps_inner inner gaps
+bindsym $mod+Shift+g mode "$mode_gaps"
+mode "$mode_gaps" {
+    bindsym o      mode "$mode_gaps_outer"
+    bindsym i      mode "$mode_gaps_inner"
+
+    bindsym 0      mode "default", exec --no-startup-id i3-msg "gaps inner current set 0" && i3-msg "gaps outer current set 0"
+    bindsym d      mode "default", exec --no-startup-id i3-msg "gaps inner current set $default_gaps_inner" && i3-msg "gaps outer current set $default_gaps_outer"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+    bindsym plus  gaps inner current plus 5
+    bindsym minus gaps inner current minus 5
+    bindsym 0     mode "default", gaps inner current set 0
+    bindsym d     mode "default", gaps inner current set $default_gaps_inner
+
+    bindsym Shift+plus  gaps inner all plus 5
+    bindsym Shift+minus gaps inner all minus 5
+    bindsym Shift+0     mode "default", gaps inner all set 0
+    bindsym Shift+d     mode "default", gaps inner all set $default_gaps_inner
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_outer" {
+    bindsym plus  gaps outer current plus 5
+    bindsym minus gaps outer current minus 5
+    bindsym 0     mode "default", gaps outer current set 0
+    bindsym d     mode "default", gaps outer current set $default_gaps_outer
+
+    bindsym Shift+plus  gaps outer all plus 5
+    bindsym Shift+minus gaps outer all minus 5
+    bindsym Shift+0     mode "default", gaps outer all set 0
+    bindsym Shift+d     mode "default", gaps outer all set $default_gaps_outer
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}

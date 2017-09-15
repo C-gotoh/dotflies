@@ -5,3 +5,4 @@ setxkbmap -option caps:swapescape
 xset r rate 200 30
 xscreensaver &
 exec i3
+#exec gnome-session
