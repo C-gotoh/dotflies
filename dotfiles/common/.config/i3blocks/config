@@ -104,10 +104,19 @@ interval=10
 separator=false
 color=#00ff7f
 
+[ssid]
+label=@: 
+command=iwgetid -r
+interval=30
+separator=false
+color=#00ff7f
+
+
 [wifi]
 label=: 
 instance=wlp4s0
 interval=10
+min_width=: 100%
 separator=true
 color=#00ff7f
 

@@ -144,28 +144,28 @@ set $ws9  "9:九"
 set $ws10 "10:十"
 
 # switch to workspace
-bindsym $mod+1 workspace $ws1 ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+2 workspace $ws2 ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+3 workspace $ws3 ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+4 workspace $ws4 ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+5 workspace $ws5 ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+6 workspace $ws6 ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+7 workspace $ws7 ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+8 workspace $ws8 ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+9 workspace $ws9 ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+0 workspace $ws10 ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+1 workspace $ws1 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+2 workspace $ws2 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+3 workspace $ws3 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+4 workspace $ws4 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+5 workspace $ws5 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+6 workspace $ws6 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+7 workspace $ws7 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+8 workspace $ws8 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+9 workspace $ws9 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+0 workspace $ws10 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number $ws1 ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+Shift+2 move container to workspace number $ws2 ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+Shift+3 move container to workspace number $ws3 ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+Shift+4 move container to workspace number $ws4 ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+Shift+5 move container to workspace number $ws5 ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+Shift+6 move container to workspace number $ws6 ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+Shift+7 move container to workspace number $ws7 ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+Shift+8 move container to workspace number $ws8 ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+Shift+9 move container to workspace number $ws9 ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+Shift+0 move container to workspace number $ws10 ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Shift+1 move container to workspace number $ws1 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Shift+2 move container to workspace number $ws2 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Shift+3 move container to workspace number $ws3 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Shift+4 move container to workspace number $ws4 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Shift+5 move container to workspace number $ws5 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Shift+6 move container to workspace number $ws6 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Shift+7 move container to workspace number $ws7 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Shift+8 move container to workspace number $ws8 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Shift+9 move container to workspace number $ws9 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Shift+0 move container to workspace number $ws10 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
 set_from_resource $darkred     color1  #cc241d
 set_from_resource $red         color9  #fb4934
@@ -242,8 +242,8 @@ bindsym $mod+m exec --no-startup-id pamixer -t
 bindsym $mod+n exec --no-startup-id nemo --no-desktop 
 
 # cycle workspaces
-bindsym $mod+p workspace next ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+i workspace prev ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+p workspace next ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+i workspace prev ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
 # music control
 bindsym $mod+z exec --no-startup-id mpc toggle
@@ -258,23 +258,23 @@ bindsym Control+Mod1+Shift+A exec --no-startup-id sh ~/script/togglesound.sh
 bindsym Control+Mod1+Shift+L exec --no-startup-id i3lock-fancy
 
 # tab between workspace
-bindsym $mod+Tab workspace back_and_forth ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Tab workspace back_and_forth ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
 # toggle sticky window
 bindsym $mod+Shift+S sticky toggle 
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show Drun && exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+d exec --no-startup-id rofi -show Drun && exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
 # start a terminal
 #bindsym $mod+Return exec --no-startup-id termite ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+Return exec --no-startup-id termite ; exec sleep 1 && exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Return exec --no-startup-id termite ; exec --no-startup-id sleep 1 && exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
 for_window [class="(?i)pavucontrol"] floating enable, move position mouse
 
 bindsym $mod+y fullscreen disable; floating enable; resize set 600 400; sticky enable; move window to position 1940 54
 
-exec feh --bg-fill ~/img/wall/spacecity.jpg
+exec --no-startup-id feh --bg-fill ~/img/wall/spacecity.jpg
 
 new_window none
 ##
