@@ -28,25 +28,18 @@ command=/usr/lib/i3blocks/$BLOCK_NAME
 separator_block_width=20
 markup=none
 
-
 [window title]
 command=xdotool getactivewindow getwindowname
 interval=once
 signal=2
-color=#A6D1FA
 min_width=400
 align=center
-
-#[colors]
-#command=echo "<span color='red'>roses</span> and <span color='#0000ff'>violets</span>"
-#markup=pango
-#interval=once
+color=#A6D1FA
 
 [music]
 label=♫: 
 command=mpc current
 color=#f19950
-#align=center
 interval=10
 signal=10
 color=#e97ac8
@@ -58,13 +51,11 @@ color=#e97ac8
 # See the script for details.
 [volume]
 label=: 
-#label=♪
 instance=Master
 #instance=PCM
-color=#e97ac8
-
 interval=once
 signal=1
+color=#e97ac8
 
 # Memory usage
 #
@@ -143,14 +134,12 @@ color=#00ff7f
 # The battery instance defaults to 0.
 [battery]
 label=:
-#label=⚡
 instance=1
 interval=30
 color=#6780c9
 
 [battery]
 label=:
-#label=⚡
 instance=0
 interval=30
 color=#6780c9
@@ -158,8 +147,8 @@ color=#6780c9
 # Date Time
 [time]
 command=date '+%m月%d日 - %H:%M'
-color=#83d0c9
 interval=5
+color=#83d0c9
 
 # Generic media player support
 #
