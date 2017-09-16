@@ -41,16 +41,16 @@ bindsym $mod+Shift+q kill ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+k focus down ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+l focus up ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+semicolon focus right ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+j focus left ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+k focus down ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+l focus up ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+semicolon focus right ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+Down focus down ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+Up focus up ; exec pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+Right focus right ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Left focus left ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Down focus down ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Up focus up ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+Right focus right ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
 # move focused window
 bindsym $mod+Shift+j move left
@@ -82,10 +82,10 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+space focus mode_toggle ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
 # focus the parent container
-bindsym $mod+a focus parent ; exec pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+a focus parent ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
 # focus the child container
 #bindsym $mod+d focus child
