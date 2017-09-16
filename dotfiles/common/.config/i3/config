@@ -236,7 +236,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
 bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down && pkill -SIGRTMIN+1 i3blocks
 bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up && pkill -SIGRTMIN+1 i3blocks
 bindsym XF86AudioMute exec --no-startup-id pamixer -t && pkill -SIGRTMIN+1 i3blocks
-bindsym $mod+m exec --no-startup-id pamixer -t 
+bindsym $mod+m exec --no-startup-id pamixer -t && pkill -SIGRTMIN+1 i3blocks
 
 # filebrowser
 bindsym $mod+n exec --no-startup-id nemo --no-desktop 
@@ -267,19 +267,17 @@ bindsym $mod+Shift+S sticky toggle
 bindsym $mod+d exec --no-startup-id rofi -show Drun && exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
 # start a terminal
-#bindsym $mod+Return exec --no-startup-id termite ; exec pkill -SIGRTMIN+2 i3blocks
 bindsym $mod+Return exec --no-startup-id termite ; exec --no-startup-id sleep 1 && exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
 for_window [class="(?i)pavucontrol"] floating enable, move position mouse
 
 bindsym $mod+y fullscreen disable; floating enable; resize set 600 400; sticky enable; move window to position 1940 54
 
-exec --no-startup-id feh --bg-fill ~/img/wall/spacecity.jpg
-
-new_window none
 ##
 # gaps
 ##
+
+new_window none
 for_window [class="^.*"] border pixel 2
 
 set $default_gaps_inner 0
@@ -335,3 +333,5 @@ mode "$mode_gaps_outer" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
+exec --no-startup-id feh --bg-fill ~/img/wall/spacecity.jpg
