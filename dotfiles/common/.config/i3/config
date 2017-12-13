@@ -228,8 +228,8 @@ bar {
 #bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -c 0 set Master 2dB+
 
 # backlight
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
 
 # pulseaudio
 # kill i3blocks with signal to update volume instantly
@@ -264,7 +264,7 @@ bindsym $mod+Tab workspace back_and_forth ; exec --no-startup-id pkill -SIGRTMIN
 bindsym $mod+Shift+S sticky toggle 
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show Drun && exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+d exec --no-startup-id rofi -show drun && exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
 # start a terminal
 bindsym $mod+Return exec --no-startup-id termite ; exec --no-startup-id sleep 1 && exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
