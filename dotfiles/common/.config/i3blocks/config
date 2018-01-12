@@ -61,7 +61,7 @@ color=#e97ac8
 #
 # The type defaults to "mem" if the instance is not specified.
 [memory]
-label= : 
+label=: 
 separator=false
 interval=15
 color=#f19950
