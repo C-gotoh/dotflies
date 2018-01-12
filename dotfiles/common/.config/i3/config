@@ -273,6 +273,10 @@ for_window [class="(?i)pavucontrol"] floating enable, move position mouse
 
 bindsym $mod+y fullscreen disable; floating enable; resize set 600 400; sticky enable; move window to position 1940 54
 
+# screenshot
+bindsym --release Print exec --no-startup-id "scrot -e 'mv $f ~/img/shot/'"
+bindsym --release Shift+Print exec --no-startup-id "scrot -s -e 'mv $f ~/img/shot/'"
+
 ##
 # gaps
 ##

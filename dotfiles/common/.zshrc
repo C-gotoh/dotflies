@@ -63,7 +63,11 @@ DISABLE_AUTO_UPDATE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  ssh-agent
 )
+
+zstyle :omz:plugins:ssh-agent agent-forwarding on
+zstyle :omz:plugins:ssh-agent lifetime 4h
 
 
 # User configuration
@@ -219,4 +223,7 @@ alias ssh=color-ssh
 
 # fasd
 eval "$(fasd --init auto)"
+
+# dircolors
+eval `dircolors ~/Repo/dircolors-solarized/dircolors.256dark`
 
