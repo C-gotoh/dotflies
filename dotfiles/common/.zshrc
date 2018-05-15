@@ -4,13 +4,17 @@
 # add ~/self/bin to path
 export PATH=~/self/bin:$PATH
 
+# virtualenvwrapper
+export WORKON_HOME=~/.virtualenvs
+source virtualenvwrapper.sh
+
 # Path to your oh-my-zsh installation.
 ZSH=/usr/share/oh-my-zsh/
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -88,7 +92,7 @@ zstyle :omz:plugins:ssh-agent lifetime 4h
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -125,37 +129,55 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-# === MY STUFF ==
+# ============================================
+# ============ Custom Stuff ==================
+# ============================================
 
-# alias
+# ============= Alias ========================
+# ============================================
 alias spacman='sudo pacman'
+alias mus='ncmpcpp'
+alias mush='ncmpcpp -h'
+alias redo='sudo $(fc -ln -1)'
+alias what='dmesg -wHeT'
+alias scan='sudo wifi-menu -o'
+alias is='ps aux | grep'
+# ======= ls alias ===========================
 alias ls='ls --color=auto'
 alias ll='ls -l'
 alias la='ls -a'
+alias lal='ls -al'
+# ======== git alias =========================
 alias gd='git diff'
 alias glo='git log --graph --format="%C(yellow)%h %C(yellow bold) %cd %C(red bold)%d%C(blue bold) <%an> [%cn]%Creset %s" --abbrev=10u'
 alias gla='git log --graph --author-date-order --format=fuller'
 alias gl='git log --graph --topo-order'
 alias gp='git pull'
 alias gc='git commit'
+alias gca='git commit --amend'
 alias gcm='git commit -m'
 alias pushup='git push -u origin HEAD'
 alias gd='git diff'
 alias gds='git diff --staged'
+alias gdc='git diff --cached'
+alias gdj='git diff --color | diff-so-fancy | less --tabs=4 -RFX --pattern "^(Date|added|deleted|modified): "'
 alias gs='git show'
+alias gsw='git show --word-diff=color'
 alias gst='git stash'
 alias gsta='git stash apply'
 alias ga='git add'
 alias gaa='git add .'
-alias gd='git diff'
-alias gdc='git diff --cached'
-
-alias mus='ncmpcpp'
-# git doge
+# ======== git doge ===========================
 alias wow='git status'
 alias very='git'
 alias such='git'
 alias many='git'
+# ======== replace rm with del ================
+alias rm='echo "dont use rm"'
+alias del='trash'
+
+# ======== Bindings ===========================
+# =============================================
 
 # allow ctrl-a and ctrl-e to move to beginning/end of line
 bindkey '^a' beginning-of-line
@@ -175,13 +197,15 @@ bindkey '^w' backward-kill-word
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 
-# cast a url to chromecast
+# ======== Functions ==========================
+# =============================================
 
+# cast a media url to chromecast (via castnow)
 function cast {
     youtube-dl --no-playlist -o - $1 | castnow --quiet -
 }
-# add a url to mpd
 
+# add a url to mpd (via mpc)
 function mpcadd {
     host=$2
     if [[ -z $2 ]] ; then
@@ -189,11 +213,11 @@ function mpcadd {
     fi
     youtube-dl --no-playlist -g $1 | mpc -h $host insert
 }
-# print a file on a printer with lpr on host uni
 
+# print a file on a printer with lpr on host uni
 function printuni {
-    printer=$2
     file=$1
+    printer=$2
     if [[ -z $2 ]] ; then
         printer='g235_hp'
     fi
@@ -204,8 +228,9 @@ function printuni {
     else
         echo 'Ok, not printing'
     fi
-    }
-    
+}
+
+# replace ssh with a wrapper that changes background color of terminal
 color-ssh() {
     trap "colorterm.sh" INT EXIT
     if [[ "$*" =~ "uni" ]]; then
@@ -225,5 +250,6 @@ alias ssh=color-ssh
 eval "$(fasd --init auto)"
 
 # dircolors
-eval `dircolors ~/Repo/dircolors-solarized/dircolors.256dark`
+#eval `dircolors ~/Repo/dircolors-solarized/dircolors.256dark`
+eval "$(dircolors ~/Repo/dircolors-solarized/dircolors.256dark)"
 
