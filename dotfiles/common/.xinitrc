@@ -7,7 +7,7 @@ setxkbmap -option caps:swapescape
 # xmodmap -e 'keycode 0x9=Caps_Lock' # map esc = capslock 
 
 # compose key
-setkbmap -option compose:ralt
+setxkbmap -option compose:ralt
 
 # set keyboard repeat rate and delay
 xset r rate 200 30
