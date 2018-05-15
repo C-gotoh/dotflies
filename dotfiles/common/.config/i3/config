@@ -264,7 +264,7 @@ bindsym $mod+Tab workspace back_and_forth ; exec --no-startup-id pkill -SIGRTMIN
 bindsym $mod+Shift+S sticky toggle 
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show drun && exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+d exec --no-startup-id rofi -show drun -modi "drun#run#window#calc" -no-sort && exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
 # start a terminal
 bindsym $mod+Return exec --no-startup-id termite ; exec --no-startup-id sleep 1 && exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
@@ -277,6 +277,13 @@ bindsym $mod+y fullscreen disable; floating enable; resize set 600 400; sticky e
 bindsym --release Print exec --no-startup-id "scrot -e 'mv $f ~/img/shot/'"
 bindsym --release Shift+Print exec --no-startup-id "scrot -s -e 'mv $f ~/img/shot/'"
 
+set $mode_soundboard soundboard
+mode "$mode_soundboard" {
+    bindsym 0      exec mpv ~/meninchairs.webm
+    bindsym Escape mode "default"
+    }
+bindsym XF86Tools mode "$mode_soundboard"
+
 ##
 # gaps
 ##
@@ -284,7 +291,7 @@ bindsym --release Shift+Print exec --no-startup-id "scrot -s -e 'mv $f ~/img/sho
 new_window none
 for_window [class="^.*"] border pixel 2
 
-set $default_gaps_inner 0
+set $default_gaps_inner 10
 set $default_gaps_outer 0
 
 gaps inner 10
@@ -293,9 +300,9 @@ smart_gaps on
 
 # gaps control
 
-set $mode_gaps gaps
-set $mode_gaps_outer outer gaps
-set $mode_gaps_inner inner gaps
+set $mode_gaps [gaps] (o, i, 0, d)
+set $mode_gaps_inner [inner gaps] (<Shift> +, -, 0, d)
+set $mode_gaps_outer [outer gaps] (<Shift> +, -, 0, d)
 bindsym $mod+Shift+g mode "$mode_gaps"
 mode "$mode_gaps" {
     bindsym o      mode "$mode_gaps_outer"
