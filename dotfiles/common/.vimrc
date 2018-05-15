@@ -55,3 +55,10 @@ nnoremap <silent> <leader>do V:diffput <cr>
 " map r to replace yanked text in insert mode
 vmap r "_dP
 
+" hidden characters
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+
+" fold level
+set foldmethod=manual
+set foldlevel=20
+set foldlevelstart=20
