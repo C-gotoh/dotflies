@@ -7,7 +7,8 @@ allow_bold = true
 dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
-font = Monospace 9
+#font = Monospace 9
+font = Source Code Pro 9
 scrollback_lines = 10000
 search_wrap = true
 #icon_name = terminal
@@ -45,11 +46,14 @@ background = #3f3f3f
 highlight = #2f2f2f
 
 # colors from color0 to color254 can be set
-color0 = #3f3f3f
-color1 = #705050
+# color0 = #3f3f3f
+color0 = #252525
+# color1 = #705050
+color1 = #E05060
 color2 = #60b48a
 color3 = #dfaf8f
-color4 = #506070
+# color4 = #506070
+color4 = #5060B0
 color5 = #dc8cc3
 color6 = #8cd0d3
 color7 = #dcdccc
@@ -65,7 +69,7 @@ color15 = #ffffff
 [hints]
 font = Dejavu Sans Mono 12
 #font = Source Code Pro 12
-#font = Droid Sans Mono 8 
+#font = Droid Sans Mono 8
 #foreground = #dcdccc
 #background = #3f3f3f
 #active_foreground = #e68080
