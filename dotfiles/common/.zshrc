@@ -145,6 +145,7 @@ alias is='ps aux | grep'
 # ======= ls alias ===========================
 alias ls='ls --color=auto'
 alias ll='ls -l'
+alias lll='ls -l --time-style=long-iso'
 alias la='ls -a'
 alias lal='ls -al'
 # ======== git alias =========================

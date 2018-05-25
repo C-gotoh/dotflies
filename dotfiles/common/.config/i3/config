@@ -128,10 +128,11 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
-###
-## My Config
-###
+#============================
+#       My Config           #
+#============================
 
+#== define workspace names (prefix numbers for sorting, those are removed in the bar)
 set $ws1  "1:一"
 set $ws2  "2:二"
 set $ws3  "3:三"
@@ -143,7 +144,7 @@ set $ws8  "8:八"
 set $ws9  "9:九"
 set $ws10 "10:十"
 
-# switch to workspace
+#== switch to workspace
 bindsym $mod+1 workspace $ws1 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 bindsym $mod+2 workspace $ws2 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 bindsym $mod+3 workspace $ws3 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
@@ -155,7 +156,7 @@ bindsym $mod+8 workspace $ws8 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 bindsym $mod+9 workspace $ws9 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 bindsym $mod+0 workspace $ws10 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
-# move focused container to workspace
+#== move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 bindsym $mod+Shift+2 move container to workspace number $ws2 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 bindsym $mod+Shift+3 move container to workspace number $ws3 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
@@ -167,6 +168,7 @@ bindsym $mod+Shift+8 move container to workspace number $ws8 ; exec --no-startup
 bindsym $mod+Shift+9 move container to workspace number $ws9 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 bindsym $mod+Shift+0 move container to workspace number $ws10 ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
+#== define colors
 set_from_resource $darkred     color1  #cc241d
 set_from_resource $red         color9  #fb4934
 set_from_resource $darkgreen   color2  #000000
@@ -185,7 +187,6 @@ set_from_resource $white       color15 #000000
 set $black       #282828
 set $darkblack   #8ec07c
 set $transparent #000001a3
-#set $barbg #2f343f
 set $barbg #2D2D2D
 
 #                       BORDER      BACKGROUND  TEXT        INDICATOR   CHILD_BORDER
@@ -195,17 +196,16 @@ client.focused_inactive $black      $black      $white      $darkblack  $darkcya
 client.urgent           $darkred    $darkred    $black      $darkred    $darkred
 client.background       $black
 
-hide_edge_borders smart
 
+#== bar definition
 bar {
         position top
         status_command i3blocks
-        #status_command i3status
         strip_workspace_numbers yes
         #separator_symbol " "
         #separator_symbol " *"
-        separator_symbol " ❮"
-        separator_symbol "∗"
+        #separator_symbol " ❮"
+        #separator_symbol "∗"
         separator_symbol " "
         i3bar_command i3bar -t
         colors {
@@ -213,70 +213,80 @@ bar {
             background         $barbg
             separator          $green
 
-    #                          BORDER       BACKGROUND   TEXT
-            focused_workspace  $barbg $barbg $red
-            inactive_workspace $barbg $barbg $white
-            active_workspace   $barbg $barbg $white
+            #                  BORDER       BACKGROUND   TEXT
+            focused_workspace  $barbg       $barbg       $red
+            inactive_workspace $barbg       $barbg       $white
+            active_workspace   $barbg       $barbg       $white
             urgent_workspace   $darkred     $darkred     $transparent
             binding_mode       $darkred     $darkred     $transparent
         }
 }
 
 
-# alsa
+
+#===== Audio ===============
+
+#== alsa
 #bindsym XF86AudioLowerVolume exec --no-startup-id amixer -c -1 set Master 2dB-
 #bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -c 0 set Master 2dB+
 
-# backlight
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
-
-# pulseaudio
+#== pulseaudio
 # kill i3blocks with signal to update volume instantly
 bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down && pkill -SIGRTMIN+1 i3blocks
 bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up && pkill -SIGRTMIN+1 i3blocks
 bindsym XF86AudioMute exec --no-startup-id pamixer -t && pkill -SIGRTMIN+1 i3blocks
 bindsym $mod+m exec --no-startup-id pamixer -t && pkill -SIGRTMIN+1 i3blocks
 
-# filebrowser
-bindsym $mod+n exec --no-startup-id nemo --no-desktop 
-
-# cycle workspaces
-bindsym $mod+p workspace next ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+i workspace prev ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
-
-# music control
+#== music control (mpd)
 bindsym $mod+z exec --no-startup-id mpc toggle
 bindsym $mod+q exec --no-startup-id mpc prev
 bindsym $mod+x exec --no-startup-id mpc next
 
-# toggle between hdmi and internal screen / audio 
+#===== Display ============
+
+#== toggle between hdmi and internal screen / audio 
 bindsym Control+Mod1+Shift+S exec --no-startup-id sh ~/script/togglescreen.sh
 bindsym Control+Mod1+Shift+A exec --no-startup-id sh ~/script/togglesound.sh
 
-# i3lock
-bindsym Control+Mod1+Shift+L exec --no-startup-id i3lock-fancy
+#== backlight control
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
 
-# tab between workspace
-bindsym $mod+Tab workspace back_and_forth ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+#===== Applications =========
 
-# toggle sticky window
-bindsym $mod+Shift+S sticky toggle 
+#== start dmenu (a program launcher)
+bindsym $mod+d exec --no-startup-id rofi -show drun -modi "drun#run#window#calc" -sort && exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
-# start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show drun -modi "drun#run#window#calc" -no-sort && exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+#== terminal
+bindsym $mod+Return exec --no-startup-id termite && exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
-# start a terminal
-bindsym $mod+Return exec --no-startup-id termite ; exec --no-startup-id sleep 1 && exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+#== filebrowser
+bindsym $mod+n exec --no-startup-id nemo --no-desktop 
 
+#== spawn pavucontrol as floating
 for_window [class="(?i)pavucontrol"] floating enable, move position mouse
 
-bindsym $mod+y fullscreen disable; floating enable; resize set 600 400; sticky enable; move window to position 1940 54
-
-# screenshot
+#== screenshot
 bindsym --release Print exec --no-startup-id "scrot -e 'mv $f ~/img/shot/'"
 bindsym --release Shift+Print exec --no-startup-id "scrot -s -e 'mv $f ~/img/shot/'"
 
+#===== i3 features =========
+
+#== cycle workspaces
+bindsym $mod+p workspace next ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+i workspace prev ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+
+#== tab between workspace
+bindsym $mod+Tab workspace back_and_forth ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+
+#== i3lock
+bindsym Control+Mod1+Shift+L exec --no-startup-id i3lock-fancy
+
+#== sticky floating window (for music control f.e.)
+bindsym $mod+Shift+S sticky toggle 
+bindsym $mod+y fullscreen disable; floating enable; resize set 600 400; sticky enable; move window to position 1940 54
+
+#== soundboard
 set $mode_soundboard soundboard
 mode "$mode_soundboard" {
     bindsym 0      exec mpv ~/meninchairs.webm
@@ -284,9 +294,12 @@ mode "$mode_soundboard" {
     }
 bindsym XF86Tools mode "$mode_soundboard"
 
-##
-# gaps
-##
+#====================
+# i3-gaps + borders
+#====================
+
+#== hide edge borders smart
+hide_edge_borders smart
 
 new_window none
 for_window [class="^.*"] border pixel 2
@@ -298,7 +311,7 @@ gaps inner 10
 gaps outer 0
 smart_gaps on
 
-# gaps control
+#== gaps control
 
 set $mode_gaps [gaps] (o, i, 0, d)
 set $mode_gaps_inner [inner gaps] (<Shift> +, -, 0, d)
@@ -345,4 +358,5 @@ mode "$mode_gaps_outer" {
     bindsym Escape mode "default"
 }
 
+#== set background image
 exec --no-startup-id feh --bg-fill ~/img/wall/spacecity.jpg
