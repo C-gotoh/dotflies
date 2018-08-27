@@ -1,0 +1,13 @@
+#!/bin/bash
+# Context Aware MPC
+current_ap=$(iwgetid -r)
+#home_ap='Portpourri GGGGG'
+home_ap=$HOME_AP_SSID
+#host='kan.local'
+host=$HOME_SERVER_NAME
+if [ "$current_ap" = "$home_ap" ];
+then
+    echo $(mpc -h $host $1)
+else
+    echo $(mpc $1)
+fi

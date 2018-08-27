@@ -15,6 +15,10 @@ xset r rate 200 30
 # start xscreensaver
 xscreensaver &
 
+# PATHS / Variables
+export HOME_AP_SSID="Portpourri GGGGG"
+export HOME_SERVER_NAME="kan.local"
+
 # exec wm
 exec i3
 #exec gnome-session
