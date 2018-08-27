@@ -9,9 +9,23 @@ set bg=dark
 " colorscheme
 colorscheme desert
 " underline cursor line
-set cul
+" set cul
 " style cursorline
-hi CursorLine term=Bold cterm=NONE ctermfg=White ctermbg=Darkred gui=NONE guifg=DarkGrey guibg=NONE
+"hi CursorLine term=Bold cterm=NONE ctermfg=White ctermbg=4 gui=NONE guifg=DarkGrey guibg=NONE
+"hi CursorLine term=Bold ctermfg=White ctermbg=DarkRed gui=NONE guifg=DarkGrey guibg=NONE
+"hi CursorColumn ctermfg=Yellow ctermbg=Yellow term=Bold
+set cursorline
+set cursorcolumn
+
+augroup vimrc
+
+   autocmd!
+
+   autocmd ColorScheme * highlight CursorLine cterm=None ctermbg=Black
+   autocmd ColorScheme * highlight CursorColumn cterm=None ctermbg=Black
+
+ augroup END
+
 " syntax hl
 syntax on
 " show cursor position below
@@ -44,9 +58,8 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
-" Map <C-L> (redraw screen) to also turn off search highlighting until the
-" next search
-nnoremap <C-L> :nohl<CR><C-L>
+" Map <C-M> to redraw screen + turn off current search highlighting 
+nnoremap <C-M> :nohl<CR><C-L>
 
 " in diff mode get one line to current window
 nnoremap <silent> <leader>dg V:diffget <cr> :diffu <cr>
@@ -58,7 +71,14 @@ vmap r "_dP
 " hidden characters
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
-" fold level
+" fold level unfold with zi
 set foldmethod=manual
 set foldlevel=20
 set foldlevelstart=20
+set nofoldenable
+
+" navigate buffers
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-H> <C-W>h
+nnoremap <C-L> <C-W>l
