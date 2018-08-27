@@ -38,8 +38,8 @@ color=#A6D1FA
 
 [music]
 label=♫ : 
-command=~/self/dotflies/scripts/campcc current
-#command=campcc current
+command=~/self/dotflies/scripts/campc current
+#command=campc current
 #command=mpc current
 color=#f19950
 interval=10

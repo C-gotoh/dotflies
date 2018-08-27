@@ -236,9 +236,9 @@ bindsym XF86AudioMute exec --no-startup-id pamixer -t && pkill -SIGRTMIN+1 i3blo
 bindsym $mod+m exec --no-startup-id pamixer -t && pkill -SIGRTMIN+1 i3blocks
 
 #== music control (mpd)
-bindsym $mod+z exec --no-startup-id ~/self/dotflies/scripts/campcc toggle
-bindsym $mod+q exec --no-startup-id ~/self/dotflies/scripts/campcc prev
-bindsym $mod+x exec --no-startup-id ~/self/dotflies/scripts/campcc next
+bindsym $mod+z exec --no-startup-id ~/self/dotflies/scripts/campc toggle
+bindsym $mod+q exec --no-startup-id ~/self/dotflies/scripts/campc prev
+bindsym $mod+x exec --no-startup-id ~/self/dotflies/scripts/campc next
 
 #===== Display ============
 
