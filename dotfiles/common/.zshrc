@@ -3,6 +3,7 @@
 
 # add ~/self/bin to path
 export PATH=~/self/bin:$PATH
+export PATH=~/self/dotflies/scripts:$PATH
 
 # virtualenvwrapper
 export WORKON_HOME=~/.virtualenvs
@@ -146,6 +147,7 @@ alias is='ps aux | grep'
 alias ls='ls --color=auto'
 alias ll='ls -l'
 alias lll='ls -l --time-style=long-iso'
+alias llh='ls -lh'
 alias la='ls -a'
 alias lal='ls -al'
 # ======== git alias =========================
