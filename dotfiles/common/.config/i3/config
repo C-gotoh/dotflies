@@ -16,7 +16,6 @@ set $mod Mod4
 #font pango:monospace 8
 font pango:SourceCodePro 8,FontAwesome 8
 
-
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -31,7 +30,6 @@ font pango:SourceCodePro 8,FontAwesome 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-
 # kill focused window
 bindsym $mod+Shift+q kill ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
@@ -41,10 +39,10 @@ bindsym $mod+Shift+q kill ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+k focus down ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+l focus up ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
-bindsym $mod+semicolon focus right ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+h focus left ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+j focus down ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+k focus up ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+l focus right ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
@@ -53,10 +51,10 @@ bindsym $mod+Up focus up ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 bindsym $mod+Right focus right ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -65,10 +63,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+Shift+b split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+Shift+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -238,9 +236,9 @@ bindsym XF86AudioMute exec --no-startup-id pamixer -t && pkill -SIGRTMIN+1 i3blo
 bindsym $mod+m exec --no-startup-id pamixer -t && pkill -SIGRTMIN+1 i3blocks
 
 #== music control (mpd)
-bindsym $mod+z exec --no-startup-id mpc toggle
-bindsym $mod+q exec --no-startup-id mpc prev
-bindsym $mod+x exec --no-startup-id mpc next
+bindsym $mod+z exec --no-startup-id ~/self/dotflies/scripts/campcc toggle
+bindsym $mod+q exec --no-startup-id ~/self/dotflies/scripts/campcc prev
+bindsym $mod+x exec --no-startup-id ~/self/dotflies/scripts/campcc next
 
 #===== Display ============
 
