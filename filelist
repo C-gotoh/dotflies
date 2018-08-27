@@ -4,7 +4,6 @@
 .Xresources
 
 .config/chromium-flags.conf
-.config/htop/htoprc
 .config/i3/config
 .config/i3blocks/config
 .config/mpd/mpd.config
