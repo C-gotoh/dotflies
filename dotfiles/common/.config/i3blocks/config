@@ -37,8 +37,10 @@ align=center
 color=#A6D1FA
 
 [music]
-label=♫: 
-command=mpc current
+label=♫ : 
+command=~/self/dotflies/scripts/campcc current
+#command=campcc current
+#command=mpc current
 color=#f19950
 interval=10
 signal=10
@@ -50,7 +52,7 @@ color=#e97ac8
 # The second parameter overrides the mixer selection
 # See the script for details.
 [volume]
-label=: 
+label= : 
 instance=Master
 #instance=PCM
 interval=once
@@ -61,7 +63,7 @@ color=#e97ac8
 #
 # The type defaults to "mem" if the instance is not specified.
 [memory]
-label=: 
+label= :
 separator=false
 interval=15
 color=#f19950
@@ -79,7 +81,7 @@ color=#f19950
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
 [disk]
-label=: 
+label= :
 #instance=/mnt/data
 interval=30
 color=#74ba00
@@ -89,14 +91,14 @@ color=#74ba00
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 [iface]
-label=: 
+label= :
 instance=wlp4s0
 interval=10
 separator=false
 color=#00ff7f
 
 [ssid]
-label=@: 
+label=@ : 
 command=iwgetid -r
 interval=30
 separator=false
@@ -104,7 +106,7 @@ color=#00ff7f
 
 
 [wifi]
-label=: 
+label= :
 instance=wlp4s0
 interval=10
 min_width=: 100%
@@ -133,13 +135,13 @@ color=#00ff7f
 #
 # The battery instance defaults to 0.
 [battery]
-label=:
+label= :
 instance=1
 interval=30
 color=#6780c9
 
 [battery]
-label=:
+label= :
 instance=0
 interval=30
 color=#6780c9
