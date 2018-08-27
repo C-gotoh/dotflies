@@ -67,7 +67,7 @@ color14 = #93e0e3
 color15 = #ffffff
 
 [hints]
-font = Dejavu Sans Mono 12
+#font = Dejavu Sans Mono 12
 #font = Source Code Pro 12
 #font = Droid Sans Mono 8
 #foreground = #dcdccc
