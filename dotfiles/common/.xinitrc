@@ -16,6 +16,7 @@ xset r rate 200 30
 xscreensaver &
 
 # PATHS / Variables
+# export PATH="${PATH}:~/self/dotflies/scripts"
 export HOME_AP_SSID="Portpourri GGGGG"
 export HOME_SERVER_NAME="kan.local"
 

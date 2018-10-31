@@ -184,13 +184,15 @@ set_from_resource $white       color15 #000000
 
 set $black       #282828
 set $darkblack   #8ec07c
+set $darkred   #f03f3f
 set $transparent #000001a3
 set $barbg #2D2D2D
+set $darkyellow #ffaa00
 
 #                       BORDER      BACKGROUND  TEXT        INDICATOR   CHILD_BORDER
-client.focused          $red      $black      $darkwhite  $darkblack  $darkyellow
-client.unfocused        $black      $black      $white      $darkblack  $darkwhite
-client.focused_inactive $black      $black      $white      $darkblack  $darkcyan
+client.focused          $red        $black      $darkwhite  $darkred  $darkyellow
+client.unfocused        $black      $black      $white      $darkred  $darkwhite
+client.focused_inactive $black      $black      $white      $darkred  $darkcyan
 client.urgent           $darkred    $darkred    $black      $darkred    $darkred
 client.background       $black
 
