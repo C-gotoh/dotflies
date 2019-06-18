@@ -170,6 +170,7 @@ alias gst='git stash'
 alias gsta='git stash apply'
 alias ga='git add'
 alias gaa='git add .'
+alias gpo='git pull origin/master'
 # ======== git doge ===========================
 alias wow='git status'
 alias very='git'
@@ -177,7 +178,11 @@ alias such='git'
 alias many='git'
 # ======== replace rm with del ================
 alias rm='echo "dont use rm"'
-alias del='trash'
+alias del='trash -v'
+# ======== various ==============================
+alias space='du -h --max-depth=1'
+alias dd='dd status=progress'
+
 
 # ======== Bindings ===========================
 # =============================================
@@ -199,6 +204,11 @@ bindkey '^w' backward-kill-word
 # search through history with arrow keys
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
+
+# fasd aliases
+alias v='f -e vim' # quick opening files with vim
+alias m='f -e mpv' # quick opening files with mpv
+alias o='a -e xdg-open' # quick opening files with xdg-open
 
 # ======== Functions ==========================
 # =============================================
