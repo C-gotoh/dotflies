@@ -262,13 +262,7 @@ function compress-pdf {
 # replace ssh with a wrapper that changes background color of terminal
 color-ssh() {
     trap "colorterm.sh" INT EXIT
-    if [[ "$*" =~ "uni" ]]; then
-        colorterm.sh uni
-    elif [[ "$*" =~ "dev" ]]; then
-        colorterm.sh dev
-    else
-        colorterm.sh other
-    fi
+    colorterm.sh $*
     ssh $*
     }
 
