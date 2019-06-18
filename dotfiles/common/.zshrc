@@ -1,9 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# add ~/self/bin to path
-export PATH=~/self/bin:$PATH
-export PATH=~/self/dotflies/scripts:$PATH
+# add scripts to path
+export PATH=~/.scripts:$PATH
 
 # virtualenvwrapper
 export WORKON_HOME=~/.virtualenvs
