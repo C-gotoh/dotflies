@@ -295,7 +295,7 @@ bindsym $mod+y fullscreen disable; floating enable; resize set 600 400; sticky e
 #== soundboard
 set $mode_soundboard soundboard
 mode "$mode_soundboard" {
-    bindsym 0      exec mpv ~/meninchairs.webm
+    bindsym 0      exec mpv --fullscreen ~/Videos/meninchairs.webm
     bindsym Escape mode "default"
     }
 bindsym XF86Tools mode "$mode_soundboard"
