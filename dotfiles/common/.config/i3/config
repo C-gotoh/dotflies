@@ -253,6 +253,11 @@ bindsym Control+Mod1+Shift+A exec --no-startup-id sh ~/script/togglesound.sh
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
 
+#== Random wallpaper
+
+bindsym Control+Mod1+4 exec --no-startup-id feh --bg-fill --randomize ~/img/wall/
+bindsym Control+Mod1+5 exec --no-startup-id feh --bg-fill --randomize ~/img/wall/anime/
+
 #===== Applications =========
 
 #== start dmenu (a program launcher)
