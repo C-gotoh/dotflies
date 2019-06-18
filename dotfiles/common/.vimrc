@@ -24,6 +24,9 @@ augroup vimrc
    autocmd ColorScheme * highlight CursorLine cterm=None ctermbg=Black
    autocmd ColorScheme * highlight CursorColumn cterm=None ctermbg=Black
 
+   " start nerdtree
+   " autocmd vimenter * NERDTree
+
  augroup END
 
 " syntax hl
@@ -82,3 +85,9 @@ nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-H> <C-W>h
 nnoremap <C-L> <C-W>l
+
+
+" nerdtree shortcuts
+map <C-n> :NERDTreeToggle<CR>
+   
+execute pathogen#infect()
