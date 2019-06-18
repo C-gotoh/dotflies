@@ -243,6 +243,22 @@ function printuni {
     fi
 }
 
+function convert-to {
+    pandoc -t $1 $2 | xclip -selection c
+}
+
+function convert-to-mediawiki {
+    convert-to mediawiki $1
+}
+
+function record-cam {
+    ffmpeg -f v4l2 -video_size $2 -i $1 -c:v libx264 -preset superfast $3
+}
+
+function compress-pdf {
+    /usr/bin/gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.6 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$2 $1
+}    
+
 # replace ssh with a wrapper that changes background color of terminal
 color-ssh() {
     trap "colorterm.sh" INT EXIT
