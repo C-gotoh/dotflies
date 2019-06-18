@@ -9,3 +9,8 @@
 .config/mpd/mpd.config
 .config/rofi/config
 .config/termite/config
+
+# scripts
+.scripts/campc
+.scripts/colorterm.sh
+.scripts/git-speaker

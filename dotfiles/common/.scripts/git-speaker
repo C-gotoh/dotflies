@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# getting recent git hash, ignoring merge commits
+hash=$(git log --no-merges --first-parent | head -n 1 | cut -d' ' -f2-)
+
+# getting '<author> <commit message>' string from commit
+# the -s option is mandatory because git show does not respect the format option when called with a specific commit hash otherwise
+message=$(git show -s --format=%an\ %m\ %s $hash)
+
+echo $message
+# using espeak to read message and play with pulseaudio
+echo $message | espeak --stdout | paplay
+# with alsa normal espeak is fine
+# echo $message | espeak
