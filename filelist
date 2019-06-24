@@ -9,6 +9,8 @@
 .config/mpd/mpd.config
 .config/rofi/config
 .config/termite/config
+.config/git/config
+.config/git/gitmessage
 
 # scripts
 .scripts/campc
