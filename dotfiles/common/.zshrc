@@ -10,6 +10,8 @@ setxkbmap -layout us
 # add scripts to path
 export PATH=~/.scripts:$PATH
 
+export PATH=~/.pub-cache/bin:$PATH
+
 # virtualenvwrapper
 export WORKON_HOME=~/.virtualenvs
 source virtualenvwrapper.sh
