@@ -2,6 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 setxkbmap -option caps:swapescape
+setxkbmap -option compose:ralt
 # add scripts to path
 export PATH=~/.scripts:$PATH
 
