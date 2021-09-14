@@ -22,7 +22,10 @@ augroup vimrc
    autocmd!
 
    autocmd ColorScheme * highlight CursorLine cterm=None ctermbg=Black
-   autocmd ColorScheme * highlight CursorColumn cterm=None ctermbg=Black
+   " autocmd ColorScheme * highlight CursorColumn cterm=None ctermbg=Black
+   autocmd ColorScheme * highlight CursorColumn cterm=None ctermbg=None
+   autocmd ColorScheme * highlight LineNr cterm=None ctermfg=grey
+   autocmd ColorScheme * highlight CursorLineNr cterm=None ctermbg=Black
 
    " start nerdtree
    " autocmd vimenter * NERDTree
