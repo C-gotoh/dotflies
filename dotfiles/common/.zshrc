@@ -3,6 +3,8 @@
 
 setxkbmap -option caps:swapescape
 setxkbmap -option compose:ralt
+
+xset r rate 200 30
 setxkbmap -layout us
 
 # add scripts to path
