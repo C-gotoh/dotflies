@@ -16,6 +16,8 @@ else
     printf '\033]11;#192436\007'
   elif [ "$1" == "cluster" ]; then
     printf '\033]11;#253320\007'
+  elif [ "$1" == "other" ]; then
+    printf '\033]11;#253320\007'
   else
     printf '\033]11;#282c34\007'
   fi
