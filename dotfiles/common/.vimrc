@@ -106,5 +106,24 @@ nnoremap <M-.> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%>' . lin
 
 " nerdtree shortcuts
 map <C-n> :NERDTreeToggle<CR>
+
+" navigate tabs
+nnoremap H gT
+nnoremap L gt
+
+nnoremap ,t :tabnew<CR>
+nnoremap <C-t> :tabnew<CR>
+
+" open file in new tab
+nnoremap gf <C-W>gf
+
+" toggle hidden chars
+nnoremap <C-@> :set list!<CR>
+
+" git blame
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
+
+" ctrlp
+set runtimepath^=~/.vim/bundle/ctrlp.vim
    
 execute pathogen#infect()
