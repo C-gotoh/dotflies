@@ -191,6 +191,7 @@ alias del='trash -v'
 # ======== various ==============================
 alias space='du -h --max-depth=1'
 alias dd='dd status=progress'
+alias rg='rg -i'
 
 
 # ======== Bindings ===========================
