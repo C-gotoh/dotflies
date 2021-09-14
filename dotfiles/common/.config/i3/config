@@ -286,7 +286,7 @@ bindsym $mod+i workspace prev ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 bindsym $mod+Tab workspace back_and_forth ; exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
 #== i3lock
-bindsym Control+Mod1+Shift+L exec --no-startup-id i3lock-fancy-rapid 4 3
+bindsym Control+Mod1+Shift+L exec --no-startup-id i3lock-fancy -p -n ; exec --no-startup-id echo 'Locking session' | systemd-cat -p warning -t i3lock
 
 #== sticky floating window (for music control f.e.)
 bindsym $mod+Shift+S sticky toggle 
