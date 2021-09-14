@@ -237,6 +237,15 @@ function mpcadd {
     youtube-dl --no-playlist -g $1 | mpc -h $host insert
 }
 
+function reboot {
+    read 'sure?Are you sure? '
+    if [[ $sure == 'y' ]] ; then
+        echo 'rebooting'
+        /usr/bin/reboot
+    else
+    fi
+}
+
 # print a file on a printer with lpr on host uni
 function printuni {
     file=$1
