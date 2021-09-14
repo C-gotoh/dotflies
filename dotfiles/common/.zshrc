@@ -3,6 +3,8 @@
 
 setxkbmap -option caps:swapescape
 setxkbmap -option compose:ralt
+setxkbmap -layout us
+
 # add scripts to path
 export PATH=~/.scripts:$PATH
 
