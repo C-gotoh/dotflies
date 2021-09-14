@@ -7,7 +7,7 @@ set t_Co=256
 " use dark colors in bg
 set bg=dark
 " colorscheme
-colorscheme desert
+colorscheme slate
 " underline cursor line
 " set cul
 " style cursorline
