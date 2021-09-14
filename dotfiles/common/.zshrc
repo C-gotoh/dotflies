@@ -16,6 +16,8 @@ export PATH=~/.pub-cache/bin:$PATH
 export WORKON_HOME=~/.virtualenvs
 source virtualenvwrapper.sh
 
+# 256-color mode 
+export TERM="xterm-256color"
 # Path to your oh-my-zsh installation.
 ZSH=/usr/share/oh-my-zsh/
 
