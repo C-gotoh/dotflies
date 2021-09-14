@@ -40,6 +40,8 @@ augroup vimrc
 
  augroup END
 
+ set colorcolumn=+1
+
 " syntax hl
 syntax on
 " show cursor position below
