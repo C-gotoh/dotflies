@@ -27,6 +27,8 @@ augroup vimrc
    autocmd ColorScheme * highlight LineNr cterm=None ctermfg=grey
    autocmd ColorScheme * highlight CursorLineNr cterm=None ctermbg=Black
 
+   autocmd FileType gitcommit set textwidth=72
+
    " start nerdtree
    " autocmd vimenter * NERDTree
 
