@@ -29,6 +29,12 @@ augroup vimrc
 
    autocmd FileType gitcommit set textwidth=72
 
+   autocmd FileType dart set shiftwidth=2
+   autocmd FileType dart set softtabstop=2
+   autocmd FileType dart set expandtab
+
+   autocmd BufWritePost *.dart DartFmt
+
    " start nerdtree
    " autocmd vimenter * NERDTree
 
