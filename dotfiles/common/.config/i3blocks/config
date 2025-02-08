@@ -38,7 +38,7 @@ color=#A6D1FA
 
 [music]
 label=♫ : 
-command=~/self/dotflies/scripts/campc current
+command=mpc current
 #command=campc current
 #command=mpc current
 color=#f19950
@@ -51,7 +51,7 @@ color=#e97ac8
 # The first parameter sets the step (and units to display)
 # The second parameter overrides the mixer selection
 # See the script for details.
-[volume]
+[volume/volume]
 label= : 
 instance=Master
 #instance=PCM
@@ -62,11 +62,6 @@ color=#e97ac8
 # Memory usage
 #
 # The type defaults to "mem" if the instance is not specified.
-[memory]
-label= :
-separator=false
-interval=15
-color=#f19950
 
 #[memory]
 #label=⇆: 
@@ -80,17 +75,23 @@ color=#f19950
 # The directory defaults to $HOME if the instance is not specified.
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
-[disk]
+[disk/disk]
 label= :
 #instance=/mnt/data
 interval=30
 color=#74ba00
 
+[memory/memory]
+label= :
+separator=false
+interval=15
+color=#f19950
+
 # Network interface monitoring
 #
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
-[iface]
+[iface/iface]
 label= :
 instance=wlp4s0
 interval=10
