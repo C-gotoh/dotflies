@@ -183,6 +183,8 @@ alias del='trash -v'
 alias space='du -h --max-depth=1'
 alias dd='dd status=progress'
 
+alias music='ncmpcpp'
+
 
 # ======== Bindings ===========================
 # =============================================
