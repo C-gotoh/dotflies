@@ -3,6 +3,7 @@
 
 # add scripts to path
 export PATH=~/.scripts:$PATH
+export PATH=~/.local/bin:$PATH
 
 # virtualenvwrapper
 export WORKON_HOME=~/.virtualenvs
