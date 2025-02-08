@@ -199,6 +199,9 @@ client.background       $black
 
 #== bar definition
 bar {
+        mode hide
+        hidden_state hide
+        modifier Mod4
         position top
         status_command i3blocks
         strip_workspace_numbers yes
