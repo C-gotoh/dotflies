@@ -12,8 +12,12 @@ setxkbmap -option compose:ralt
 # set keyboard repeat rate and delay
 xset r rate 200 30
 
+# turn off screensaver
+xset -dpms
+xset s off
+
 # start xscreensaver
-xscreensaver &
+#xscreensaver &
 
 # PATHS / Variables
 # export PATH="${PATH}:~/self/dotflies/scripts"
