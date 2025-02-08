@@ -28,5 +28,7 @@ export QT_ENABLE_HIGHDPI_SCALING=1
 export GDK_SCALE=2
 
 # exec wm
+xrdb ~/.Xresources
+
 exec i3
 #exec gnome-session
