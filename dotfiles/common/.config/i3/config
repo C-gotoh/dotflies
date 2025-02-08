@@ -241,9 +241,9 @@ bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle && pkill
 bindsym $mod+m exec --no-startup-id pamixer -t && pkill -SIGRTMIN+1 i3blocks
 
 #== music control (mpd)
-bindsym $mod+z exec --no-startup-id ~/self/dotflies/scripts/campc toggle
-bindsym $mod+q exec --no-startup-id ~/self/dotflies/scripts/campc prev
-bindsym $mod+x exec --no-startup-id ~/self/dotflies/scripts/campc next
+bindsym $mod+z exec --no-startup-id mpc toggle
+bindsym $mod+q exec --no-startup-id mpc prev
+bindsym $mod+x exec --no-startup-id mpc next
 
 #===== Display ============
 
