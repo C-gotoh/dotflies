@@ -263,7 +263,7 @@ bindsym Control+Mod1+5 exec --no-startup-id feh --bg-fill --randomize ~/img/wall
 #===== Applications =========
 
 #== start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show drun -modi "drun#run#window#calc" -sort && exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
+bindsym $mod+d exec --no-startup-id rofi -show drun -modi "drun#run#window#calc" -sort -show-icons && exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
 
 #== terminal
 bindsym $mod+Return exec --no-startup-id alacritty && exec --no-startup-id pkill -SIGRTMIN+2 i3blocks
