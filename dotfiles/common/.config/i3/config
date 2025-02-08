@@ -368,3 +368,6 @@ mode "$mode_gaps_outer" {
 
 #== set background image
 exec --no-startup-id feh --bg-fill ~/img/wall/spacecity.jpg
+exec --no-startup-id mpd
+exec --no-startup-id dunst
+exec --no-startup-id xscreensaver --no-splash
