@@ -136,6 +136,10 @@ source $ZSH/oh-my-zsh.sh
 # ============ Custom Stuff ==================
 # ============================================
 
+setxkbmap -option caps:swapescape
+setxkbmap -option compose:ralt
+xset r rate 200 30
+
 # ============= Alias ========================
 # ============================================
 alias spacman='sudo pacman'
