@@ -217,6 +217,9 @@ bindkey '^w' backward-kill-word
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
+
 # fasd aliases
 alias v='f -e vim' # quick opening files with vim
 alias m='f -e mpv' # quick opening files with mpv
