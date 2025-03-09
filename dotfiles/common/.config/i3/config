@@ -307,7 +307,7 @@ bindsym XF86Tools mode "$mode_soundboard"
 #====================
 
 #== hide edge borders smart
-hide_edge_borders smart
+hide_edge_borders both
 
 new_window none
 for_window [class="^.*"] border pixel 2
@@ -317,7 +317,9 @@ set $default_gaps_outer 0
 
 gaps inner 10
 gaps outer 0
-smart_gaps on
+
+# Use outer gaps only for workspaces with 1 window, use inner gaps for workspaces with multiple windows
+smart_gaps inverse_outer 
 
 #== gaps control
 
