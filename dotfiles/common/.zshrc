@@ -177,6 +177,8 @@ alias gsta='git stash apply'
 alias ga='git add'
 alias gaa='git add .'
 alias gpo='git pull origin/master'
+alias gf='git fetch'
+alias grh='git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)'
 # ======== git doge ===========================
 alias wow='git status'
 alias very='git'
