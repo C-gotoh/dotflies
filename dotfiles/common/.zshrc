@@ -190,6 +190,8 @@ alias del='trash -v'
 # ======== various ==============================
 alias space='du -h --max-depth=1'
 alias dd='dd status=progress'
+# ======== docker =============================
+alias dc='docker compose'
 
 alias music='ncmpcpp'
 
