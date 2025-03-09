@@ -123,6 +123,8 @@ compinit
 
 source /usr/share/doc/pkgfile/command-not-found.zsh
 
+source <(jj util completion zsh)
+
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
