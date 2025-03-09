@@ -195,6 +195,8 @@ alias rg='rg -i'
 alias dc='docker compose'
 
 alias music='ncmpcpp'
+# ======== docker =============================
+alias dc='docker compose'
 
 
 # ======== Bindings ===========================
