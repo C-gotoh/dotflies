@@ -288,6 +288,23 @@ alias ssh=color-ssh
 # fasd
 eval "$(fasd --init auto)"
 
+# Interactive dir listing with zoxide
+__dirlist() {
+    # Get a directory, cd into it and save the exit code for later
+    local target=$(zoxide query --all --interactive)
+    cd $target
+    local ret=$?
+
+    # Without this, no prompt will be visible.
+    zle reset-prompt
+    return $ret
+}
+
+# Call interactive directory selection on CTRL+p
+zle -N __dirlist
+bindkey "^p" __dirlist
+
+
 # dircolors
 #eval `dircolors ~/Repo/dircolors-solarized/dircolors.256dark`
 eval "$(dircolors ~/Repo/dircolors-solarized/dircolors.256dark)"
