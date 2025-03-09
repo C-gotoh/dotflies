@@ -289,6 +289,7 @@ bindsym $mod+Tab workspace back_and_forth ; exec --no-startup-id pkill -SIGRTMIN
 
 #== i3lock
 bindsym Control+Mod1+Shift+L exec --no-startup-id i3lock-fancy-rapid 6 3
+bindsym Control+Mod1+Shift+M exec --no-startup-id ~/.screenlayout/double.sh && sleep 2 && feh --no-fehbg --bg-fill ~/img/wall/$(date +%B).jpg
 
 #== sticky floating window (for music control f.e.)
 bindsym $mod+Shift+S sticky toggle 
