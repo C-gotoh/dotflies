@@ -194,7 +194,7 @@ alias rg='rg -i'
 # ======== docker =============================
 alias dc='docker compose'
 
-alias hot='mpv --input-ipc-server=/tmp/mpv-scrobble'
+alias hot='ENABLE_HDR_WSI=1 mpv --input-ipc-server=/tmp/mpv-scrobble'
 alias music='ncmpcpp'
 
 
