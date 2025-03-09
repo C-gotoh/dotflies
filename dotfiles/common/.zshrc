@@ -72,7 +72,7 @@ plugins=(
 )
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:ssh-agent lifetime 4h
+zstyle :omz:plugins:ssh-agent lifetime 9h
 
 
 # User configuration
