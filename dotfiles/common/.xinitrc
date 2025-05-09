@@ -25,7 +25,7 @@ export HOME_AP_SSID="Portpourri GGGGG"
 export HOME_SERVER_NAME="kan.local"
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_ENABLE_HIGHDPI_SCALING=1
-export GDK_SCALE=2
+export GDK_SCALE=1
 
 # set Xresources
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
